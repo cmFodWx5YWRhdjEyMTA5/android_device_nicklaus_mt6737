@@ -1,1 +1,1 @@
-# android_device_nicklaus_mt6737
+# ANDROID_DEVICE_NICKLAUS_EM
