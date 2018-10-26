@@ -20,7 +20,7 @@ COMMON_PATH := device/mediatek/mt6737-common
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
-# Engineer Mode
+# Headers
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
 #### Packages ####
@@ -78,6 +78,10 @@ PRODUCT_PACKAGES += \
     hostapd \
     wpa_supplicant \
     wpa_supplicant.conf
+	
+# YGPS
+PRODUCT_PACKAGES += \
+    YGPS
 
 #### Copy files ####
 
@@ -98,10 +102,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
      $(COMMON_PATH)/configs/agps_profiles_conf2.xml:system/vendor/etc/agps_profiles_conf2.xml
 
-# Prebuilt
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/proprietary/bin/em_svr:system/bin/em_svr \	 
-	 
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
