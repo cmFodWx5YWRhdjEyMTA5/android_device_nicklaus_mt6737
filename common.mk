@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-TARGET_MEDIATEK_MT6737-COMMON := true
+TARGET_MEDIATEK_COMMON := true
 
 COMMON_PATH := device/mediatek/mt6737-common
 
@@ -57,6 +57,10 @@ PRODUCT_PACKAGES += \
     librs_jni \
     libnl_2
 
+# MTK Engineer Mode
+PRODUCT_PACKAGES += \
+    EngineerMode
+
 # Snap
 PRODUCT_PACKAGES += \
    Snap
@@ -78,10 +82,6 @@ PRODUCT_PACKAGES += \
     hostapd \
     wpa_supplicant \
     wpa_supplicant.conf
-	
-# YGPS
-PRODUCT_PACKAGES += \
-    YGPS
 
 #### Copy files ####
 
